@@ -346,7 +346,7 @@ public class SaltDemo {
 		saltProject.loadSaltProject(saltProjectUri);
 		
 		System.out.println("\tstore document structure to '" + documentStructureUri + "'");
-		sampleDocument= saltProject.getCorpusGraphs().get(0).getDocument(URI.createURI("salt:/myCorpus/myDocument"));
+		sampleDocument= (SDocument)saltProject.getCorpusGraphs().get(0).getNode("salt:/myCorpus/myDocument");
 		// storing
 		sampleDocument.saveDocumentGraph(documentStructureUri);
 		System.out.println("\tload document structure from '" + documentStructureUri + "'");
